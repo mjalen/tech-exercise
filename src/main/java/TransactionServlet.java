@@ -33,10 +33,10 @@ public class TransactionServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		response.getWriter().append("<a href='StatementServlet'>View Statements</a><br/>");
-		response.getWriter().append("<h1>Statement</h1>");
+		response.getWriter().append("<h1>Transaction</h1>");
 		
 		// form to which person's statement to display.
-		response.getWriter().append("<p>Select a person to view their current statement.</p>");
+		response.getWriter().append("<p>Enter a new transaction.</p>");
 		
 		List<Person> people = util.UtilDB.queryAllPeople();
 		

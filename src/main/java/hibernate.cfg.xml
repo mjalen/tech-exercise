@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://ec2-3-144-145-98.us-east-2.compute.amazonaws.com:3306/TechExerciseDatabase</property>
+		<property name="hibernate.connection.username">remoteaccess</property>
+		<property name="hibernate.connection.password">unsafepass</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">false</property>
+		<mapping class="datamodel.Person" />
+		<mapping class="datamodel.Transaction" />
+	</session-factory>
+</hibernate-configuration>
